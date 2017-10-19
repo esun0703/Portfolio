@@ -30,15 +30,18 @@
             <source type="video/mp4" src="app/css/img/explosion.mp4"></source>
         </video>
         <!-- <div id="state" class="visible-desktop"><span class="iconicfill-pause"></span></div> -->
-        <img id="explosion-pic" class="hidden-desktop" src="app/css/img/explosion.gif" alt="">
-        <a href="#modal1" id="modalBtn"><i class="small material-icons" id="menuIcon">reorder</i></a>
+        <!-- <img id="explosion-pic" class="hidden-desktop" src="app/css/img/explosion.gif" alt=""> -->
+        <!-- <a href="#modal1" id="modalBtn"><i class="small material-icons" id="menuIcon">reorder</i></a> -->
         <div class="row" id="nameRow">
             <div class="col s12">
                 <!-- <h6>HELLO, MY NAME IS</h6>
         <h1 class="animated fadeInUp">EMILY<strong>&nbsp;SUN</strong></h1> -->
-                <img class="animated fadeIn" id="name" src="app/css/img/name.png">
+                <img class="animated fadeIn" id="name" src="app/css/img/name.png">    
             </div>
         </div>
+        <!-- <div class="row">
+                <i class="fa fa-angle-double-down" style="font-size:48px;color:red; z-index:1000;"></i>
+        </div> -->
     </div>
     <!--======================= Modal Structure================================= -->
     <div id="modal1" class="modal">
@@ -96,19 +99,30 @@
             <div class="panel panel1">
               <!-- <p>Hey</p> -->
                 <p>TrailBlazer App</p>
-                <a href="https://trailblazer-rcb.herokuapp.com/">Check It Out</a>
+                <!-- <div> -->
+                    <button onclick="location.href='https://trailblazer-rcb.herokuapp.com/'">
+                        Check It Out
+                        <!-- <a href="https://trailblazer-rcb.herokuapp.com/">Check It Out</a> -->
+                    </button>
+                <!-- </div> -->
             </div>
         <!-- </a> -->
         <!-- <a href="https://esun0703.github.io/PocketSensei/" class="panel panel2"> -->
             <div class="panel panel2">
                 <p>Pocket Sensei</p>
-                <a href="https://esun0703.github.io/PocketSensei/">Check It Out</a>
+                <button onclick="location.href='https://esun0703.github.io/PocketSensei/'">
+                        Check It Out
+                        <!-- <a href="https://trailblazer-rcb.herokuapp.com/">Check It Out</a> -->
+                </button>
             </div>
         <!-- </a> -->
         <!-- <a href="https://classic-rock-hangman.herokuapp.com" class="panel panel3"> -->
             <div class="panel panel3">
                 <p>Hangman</p>
-                <a href="https://classic-rock-hangman.herokuapp.com">Check It Out</a>
+                <button onclick="location.href='https://classic-rock-hangman.herokuapp.com'">
+                        Check It Out
+                        <!-- <a href="https://trailblazer-rcb.herokuapp.com/">Check It Out</a> -->
+                </button>
             </div>
         <!-- </a> -->
     <!-- </div>
@@ -116,19 +130,28 @@
         <!-- <a href="https://disney-trivia.herokuapp.com" class="panel panel4"> -->
             <div class="panel panel4">
                 <p>Disney Trivia</p>
-                <a href="https://disney-trivia.herokuapp.com">Check It Out</a>
+                <button onclick="location.href='https://disney-trivia.herokuapp.com'">
+                        Check It Out
+                        <!-- <a href="https://trailblazer-rcb.herokuapp.com/">Check It Out</a> -->
+                </button>
             </div>
         <!-- </a> -->
         <!-- <a href="https://harry-potter-friend-finder.herokuapp.com" class="panel panel5"> -->
             <div class="panel panel5">
                 <p>Harry Potter Friend Finder</p>
-                <a href="https://harry-potter-friend-finder.herokuapp.com">Check It Out</a>
+                <button onclick="location.href='https://harry-potter-friend-finder.herokuapp.com'">
+                        Check It Out
+                        <!-- <a href="https://trailblazer-rcb.herokuapp.com/">Check It Out</a> -->
+                </button>
             </div>
         <!-- </a> -->
         <!-- <a class="panel panel6"> -->
             <div class="panel panel6">
                 <p>Other Works</p>
-                <a href="https://disney-trivia.herokuapp.com">Check It Out</a>
+                <button onclick="location.href='https://harry-potter-friend-finder.herokuapp.com'">
+                        Check It Out
+                        <!-- <a href="https://trailblazer-rcb.herokuapp.com/">Check It Out</a> -->
+                </button>
             </div>
         <!-- </a> -->
     </div>
@@ -146,14 +169,14 @@
       }
     }
 
-    function toggleClose(){
-        panels.classList.remove('open');
-    }
+    // function toggleClose(){
+    //     panels.classList.remove('open');
+    // }
 
 
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
-    panels.forEach(panel => panel.addEventListener('mouseout', toggleClose));
+
 
   </script>
     

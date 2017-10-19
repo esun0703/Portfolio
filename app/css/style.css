@@ -48,11 +48,14 @@ body {
 #overlay {
     background-color: rgba(0, 0, 0, .1);
     height: 100%;
-    left: 0;
-    position: relative;
-    top: 0;
+    /*left: 0;*/
+    /*position: relative;*/
+    /*top: 0;*/
     transition: background-color 300ms ease;
     width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fade {
@@ -72,7 +75,7 @@ body {
     position: fixed;
     right: 0;
     width: 100vw;
-    z-index: -1;
+    z-index: -3;
     overflow-x:hidden;
 }
 
@@ -110,8 +113,8 @@ body {
 }
 
 #name {
-    padding-top: 100px;
-    text-align: center;
+    /*padding-top: 100px;*/
+    /*text-align: center;*/
     width: 30%;
 }
 
@@ -285,15 +288,18 @@ h2{
     }
 
 
-    .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
-    .panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
-    .panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
-    .panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
-    .panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+    .panel1 { 
+      background-image:url(./img/1TrailBlazer.jpeg); 
+    }
+    .panel2 { background-image:url(./img/2pocketsensei.jpg); }
+    .panel3 { background-image:url(./img/3hangman.jpg); }
+    .panel4 { background-image:url(./img/4disney.jpg); }
+    .panel5 { background-image:url(./img/5harry.jpg); }
+    .panel6 { background-image:url(./img/6randm.jpg); }
 
     /*All the Flex Children*/
 
-    .panel > * {
+    .panel > *:first-child {
       margin:0;
       width: 100%;
       transition:transform 0.5s;
@@ -314,11 +320,14 @@ h2{
     }
 
     .panel > *:last-child{
-      transform:translateY(100%);
+      transform:translateY(200%);
+      font-family: 'Amatic SC', cursive;
+      font-size:30px;
+      background:rgba(255, 255, 255, .6);
     }
     /*when active will move up*/
     .panel.open-active > *:last-child{
-      transform:translateY(0);
+      transform:translateY(-200px);
     }
 
     .panel p {
@@ -333,7 +342,7 @@ h2{
 
     .panel.open {
       font-size:40px;
-      flex:5;
+      flex:100;
     }
 
 
