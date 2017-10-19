@@ -1,0 +1,171 @@
+<!-- Work Gallery -->
+    <div class="container-fluid" id="galleryContainer">
+        <!-- <h3 id="myWorkHeader">MY WORK</h3> -->
+        <!--Row 1-->
+        <div id="galleryRow" class="row">
+            <!--Featured Item 1-->
+            <a href="https://trailblazer-rcb.herokuapp.com/">
+                <div class="col m4 s12 text-center thumbnail">
+                    <img class="thumb-img" src="app/css/img/1TrailBlazer.png">
+                    <div class="caption">
+                        <h6 class="tealFont thumb-head">Trailblazer</h6>
+                        <p>Frontend UX/UI Designer</p>
+                    </div>
+                </div>
+            </a>
+            <!--Featured Item 2-->
+            <a href="https://esun0703.github.io/PocketSensei/">
+                <div class="col m4 s12 text-center thumbnail">
+                    <img class="thumb-img" src="app/css/img/2pocketsensei.png">
+                    <div class="caption">
+                        <h6 class="tealFont thumb-head">Pocket Sensei</h6>
+                        <p>Backend Developer</p>
+                    </div>
+                </div>
+            </a>
+            <!--Featured Item 3-->
+            <a href="https://classic-rock-hangman.herokuapp.com" />
+            <div class="col m4 s12 text-center thumbnail">
+                <img class="thumb-img" src="app/css/img/3hangman.png">
+                <div class="caption">
+                    <h6 class="tealFont thumb-head">Classic Rock Hangman</h6>
+                    <p>Full Stack: Frontend & Backend Developer</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <!--Row 2-->
+        <div class="row">
+            <!--Featured Item 4-->
+            <a href="https://disney-trivia.herokuapp.com" />
+            <div class="col m4 s12 text-center thumbnail">
+                <img class="thumb-img" src="app/css/img/4disney.png">
+                <div class="caption">
+                    <h6 class="tealFont thumb-head">Disney Trivia</h6>
+                    <p>Full Stack: Frontend & Backend Developer</p>
+                </div>
+            </div>
+            </a>
+            <!--Featured Item 5-->
+            <a href="https://harry-potter-friend-finder.herokuapp.com" />
+            <div class="col m4 s12 text-center thumbnail">
+                <img class="thumb-img" src="app/css/img/5harry.jpg">
+                <div class="caption">
+                    <h6 class="tealFont thumb-head">Harry Potter Friend Finder</h6>
+                    <p>Full Stack: Frontend & Backend Developer</p>
+                </div>
+            </div>
+            </a>
+            <!--Featured Item 6-->
+            <a>
+                <div class="col m4 s12 text-center thumbnail">
+                    <img class="thumb-img" src="app/css/img/6randm.jpg">
+                    <div class="caption">
+                        <h6 class="tealFont thumb-head">Art & Other Works</h6>
+                        <p>Click To See Miscellaneous Work</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+<style>
+
+    .col.m4 {
+    width: 30px;
+    margin: 0;
+    padding: 10px;
+}
+
+#galleryContainer {
+    background-color: #e5e5e5;
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    height: auto;
+}
+
+#myWorkHeader{
+    padding:30px;
+    margin:0;
+    text-align:center;
+}
+
+#galleryContainer a {
+    color: white;
+}
+
+#galleryRow{
+    width:100%;
+}
+
+
+/*IMAGE HOVER*/
+
+.thumbnail {
+    position: relative;
+}
+
+.thumb-img {
+    margin: 0em;
+    padding: 0em;
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 300px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.caption {
+    text-align: center;
+    text-shadow: .5px .5px #898989;
+    padding: 10px;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.thumbnail:hover .thumb-img {
+    opacity: 0.1;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    margin: 0em;
+    padding: 0em;
+}
+/*(248, 237, 255)*/
+.thumbnail:hover {
+    /*color:#3a3a3a;*/
+    color:white;
+    background-color: rgba(81, 81, 81, 1);
+}
+
+.thumbnail:hover .caption {
+    /*background-color:rgba(110, 11, 191,.3);*/
+    opacity: 1;
+}
+
+.thumb-head {
+    font-weight: bold
+    color:white;
+}
+
+.caption p {
+    margin: 0
+    padding:0;
+}
+
+h6 {
+    /*text-align:center;*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+} </style>

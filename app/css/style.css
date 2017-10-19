@@ -70,9 +70,8 @@ body {
     height: 100%;
     perspective: 1000;
     position: fixed;
-    right: 5%;
-    width: auto;
-    /*max-width:70%;*/
+    right: 0;
+    width: 100vw;
     z-index: -1;
     overflow-x:hidden;
 }
@@ -238,106 +237,107 @@ h2{
 
 
 /*================================Gallery================*/
+    html {
+      box-sizing: border-box;
+      background:#ffc600;
+      font-family:'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+    }
+    body {
+      margin: 0;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
 
-.col.m4 {
-    width: 30px;
-    margin: 0;
-    padding: 10px;
-}
+    .panels {
+      min-height:100vh;
+      overflow: hidden;
+      /*If need more about flex look on flexbox course*/
+      /*Makes it go side by side*/
+      display:flex;
+    }
 
-#galleryContainer {
-    background-color: #e5e5e5;
-    padding: 0em;
-    margin: 0em;
-    width: 100%;
-    height: auto;
-}
+    .panel {
+      background:#6B0F9C;
+      box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+      color:white;
+      text-align: center;
+      align-items:center;
+      /* Safari transitionend event.propertyName === flex */
+      /* Chrome + FF transitionend event.propertyName === flex-grow */
+      transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+      font-size: 20px;
+      background-size:cover;
+      background-position:center;
+      /*Each one is going to distribute evenly*/
+      flex:1;
+      justify-content:center;
+      align-items:center;
+      /*can make an item both a flex container and item which is what we're doing here*/
+      display:flex;
+      flex-direction:column;
 
-#myWorkHeader{
-    padding:30px;
-    margin:0;
-    text-align:center;
-}
-
-#galleryContainer a {
-    color: white;
-}
-
-#galleryRow{
-    width:100%;
-}
+    }
 
 
-/*IMAGE HOVER*/
+    .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
+    .panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
+    .panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+    .panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
+    .panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
 
-.thumbnail {
-    position: relative;
-}
+    /*All the Flex Children*/
 
-.thumb-img {
-    margin: 0em;
-    padding: 0em;
-    -webkit-filter: grayscale(0%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%);
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: 300px;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
+    .panel > * {
+      margin:0;
+      width: 100%;
+      transition:transform 0.5s;
+      /*border: 1px solid red;*/
+      /*Will allow the words to be in thirds*/
+      flex:1 0 auto;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+    }
+    /*first child*/
+    .panel > *:first-child{
+      transform:translateY(-100%);
+    }
+    /*when active will move down*/
+    .panel.open-active > *:first-child{
+      transform:translateY(0);
+    }
 
-.caption {
-    text-align: center;
-    text-shadow: .5px .5px #898989;
-    padding: 10px;
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    width: 90%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-}
+    .panel > *:last-child{
+      transform:translateY(100%);
+    }
+    /*when active will move up*/
+    .panel.open-active > *:last-child{
+      transform:translateY(0);
+    }
 
-.thumbnail:hover .thumb-img {
-    opacity: 0.1;
-    -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    margin: 0em;
-    padding: 0em;
-}
-/*(248, 237, 255)*/
-.thumbnail:hover {
-    /*color:#3a3a3a;*/
-    color:white;
-    background-color: rgba(81, 81, 81, 1);
-}
+    .panel p {
+      text-transform: uppercase;
+      font-family: 'Amatic SC', cursive;
+      text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 2em;
+    }
+    .panel p:nth-child(2) {
+      font-size: 4em;
+    }
 
-.thumbnail:hover .caption {
-    /*background-color:rgba(110, 11, 191,.3);*/
-    opacity: 1;
-}
+    .panel.open {
+      font-size:40px;
+      flex:5;
+    }
 
-.thumb-head {
-    font-weight: bold
-    color:white;
-}
 
-.caption p {
-    margin: 0
-    padding:0;
-}
 
-h6 {
-    /*text-align:center;*/
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-}
 
 
 /*=========================Model Styling=======================*/
