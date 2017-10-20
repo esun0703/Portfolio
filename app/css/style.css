@@ -332,6 +332,9 @@ h2{
     .panel.current > *:last-child{
       transform:translateY(-200px);
     }
+    .panel > *:last-child:hover{
+      background:rgba(255, 212, 0, .8);
+    }
 
     .panel p {
       text-transform: uppercase;
