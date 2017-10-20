@@ -159,25 +159,40 @@
     </div>
 <script>
     const panels = document.querySelectorAll('.panel');
+    
+
 
     function toggleOpen(){
-        this.classList.toggle('open');
+        // console.log(e);
+        this.classList.toggle('current');
     }
     
     function toggleActive(e){
       console.log(e.propertyName);
       if(e.propertyName.includes('flex')){
-        this.classList.toggle('open-active');
+        this.classList.toggle('current');
       }
     }
 
-    // function toggleClose(){
-    //     panels.classList.remove('open');
-    // }
-
-
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    
+    document.querySelector('.panels').addEventListener('click', function(e) {
+        var target = e.target;
+        console.log(e.target)
+        // console.log(target.tagName);//DIV
+        // console.log(e.currentTarget);//.panels
+
+        if (target.tagName === 'DIV') {
+            e.currentTarget.querySelector('.current').classList.remove('current');
+            target.classList.add('current');
+            // if(e.propertyName.includes('flex')){
+            //     target.classList.toggle('open-active');
+            // }
+        }
+    });
+
+    
+    // panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
 
   </script>

@@ -314,19 +314,12 @@ h2{
       justify-content:center;
       align-items: center;
     }
-    /*first child*/
-    /*.panel > *:first-child{
-      transform:translateY(-100%);
-    }*/
 
     /*when active will move down*/
-    .panel.open-active > *:first-child{
+    .panel.current > *:first-child{
       transform:translateY(0);
     }
 
-    .panel.open-active{
-      -webkit-filter: grayscale(0%);
-    }
 
     .panel > *:last-child{
       transform:translateY(200%);
@@ -336,7 +329,7 @@ h2{
       background:rgba(255, 255, 255, .8);
     }
     /*when active will move up*/
-    .panel.open-active > *:last-child{
+    .panel.current > *:last-child{
       transform:translateY(-200px);
     }
 
@@ -351,9 +344,10 @@ h2{
       font-size: 4em;
     }
 
-    .panel.open {
+    .panel.current {
       font-size:35px;
       flex:100;
+      -webkit-filter: grayscale(0%);
     }
 
 
