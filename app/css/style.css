@@ -137,6 +137,43 @@ h2{
     color:#808084;
 }
 
+#aboutMeContainer {
+    width:100vw;
+    background-image:url(./img/background.jpg);
+    justify-content: center; 
+    background-size: cover; 
+    height:100vh;
+    padding:30px;
+    
+}
+
+#aboutMeHeader{
+  padding:0;
+  margin:0;
+}
+#mainContent{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  /*z-index: 1;*/
+}
+.mePanel{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow: column wrap;
+  font-size:12px; 
+}
+
+/*.mePanel2{
+  flex:1;
+   
+}*/
+
+/*.mePanel1{
+ 
+}*/
 
 #introRow {
     width:100%;
@@ -153,88 +190,10 @@ h2{
  font-weight:black;
 }
 
-#myImg {
-    width: 90%;
-    /*float:left;*/
-    /*border: 2px solid #fc9b25;*/
-}
 
 #aboutMeParagraph{
     width:100%;
     font-size:16px;
-    text-align: justify; 
-}
-
-.red{
-    font-size:40px;
-    color:red;
-}
-
-#aboutMe{
-   background-color:#f8efff;
-   padding:40px; 
-}
-
-#whoAmI {
-    width:100%;
-    /*height: auto;*/
-    max-height:650px;
-    margin-bottom: 40px;
-    
-    /*clear:both;*/
-   /* margin-right:65px;*/
-}
-
-#whoAmI h3 {
-    font-family: 'Lato', sans-serif;
-    font-weight:bold;
-    
-}
-
-
-
-#aboutMeContainer {
-    width:100%;
-    background-color: #f7f8fa;
-    /*padding:2em;*/
-    z-index: 1;
-    width: 100%;
-    height:auto;
-    min-height:650px;
-    padding-right:80px;
-    padding-left:80px;
-    padding-top:10px;
-    padding-bottom:60px;
-}
-
-
-
-
-.contactImg {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    
-}
-
-#skillsImage{
-    width:470px;
-    height:470px;
-}
-
-#skillsTitle{
-    padding:10px;
-    width:50%;
-     
-}
-
-#skillsTitle h4{
-    font-size:30px;
-}
-
-#hobbiesImage {
-
-    width:400px;
 }
 
 

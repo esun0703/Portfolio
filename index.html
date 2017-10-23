@@ -9,7 +9,7 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
     <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
     <!--javascript file-->
-    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="app/js/js.js"></script>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
@@ -44,54 +44,23 @@
                 <i class="fa fa-angle-double-down" style="font-size:48px;color:red; z-index:1000;"></i>
         </div> -->
     </div>
-    <!--======================= Modal Structure================================= -->
-    <div id="modal1" class="modal">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat right"><i class="large material-icons" >toc</i></a>
-        <!-- Modal Content -->
-        <div class="modal-content">
-            <ul>
-                <li>
-                    <a href="#aboutMeContainer" class=" modal-action modal-close">
-                    ABOUT
-                    </a>
-                </li>
-                <li>
-                    <a href="#galleryContainer" class=" modal-action modal-close">
-                    WORK
-                    </a>
-                </li>
-                <li>
-                    <a href="#contactContainer" class=" modal-action modal-close">
-                    CONTACT
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
     <!--==================================== ABOUT ME================================= -->
-    <div class="container-fluid" id="aboutMeContainer">
-        <h2 class="grayFont" id="aboutMeHeader">About Me&nbsp;<span class="red">|</span></h2>
-        <div class="row" id="introRow">
-            <div class="col m6">
-                <img id="myImg" class="animated fadeIn floating-img" src="app/css/img/me.jpeg">
-            </div>
-            <div class="col m6" id="aboutMe">
+    <div id="aboutMeContainer">
+        <h2 class="grayFont" id="aboutMeHeader">About Me</h2>
+        <div class="mainContent">
+            <img class="mePanel" src="app/css/img/me.jpeg">
+            <div class="mePanel mePanel2">
                 <h4>HELLO, I'M EMILY.</h4>
-                <p class="grayFont" id="aboutMeParagraph">
+                <p class="grayFont">
                     I'm a a fullstack javascript developer & UX designer who enjoys building websites that are functional, while creating the best user experience and design. I like solving complex problems and unfolding simple solutions.
                     <br>
                     <br> I also love creating beautiful layouts and graphics using Photoshop, Illustrator, and Materialize with the elegant functionality of Javascript, Jquery, React, and Node.
                     <br>
                     <br> When I'm not coding or designing, you can see me curling up with a good book or weight lifting at my local gym.
                 </p>
-                <a href="https://www.linkedin.com/in/emilysun1" id="linkedIn"><img class="contactImg" src="app/css/img/linkedIn.png"></a>
-                <a href="https://github.com/esun0703" id="GitHub"><img class="contactImg" src="app/css/img/GitHub-Mark.png"></a>
+                <!-- <a href="https://www.linkedin.com/in/emilysun1" id="linkedIn"><img class="contactImg" src="app/css/img/linkedIn.png"></a>
+                <a href="https://github.com/esun0703" id="GitHub"><img class="contactImg" src="app/css/img/GitHub-Mark.png"></a> -->
             </div>
-            <!-- </div> -->
-            <!-- <div id="skillsTitle" class="col m6 s12">
-                <h2 class="grayFont">MY SKILLS</h2>
-                <img id="skillsImage" class="animated fadeIn floating-img" src="css/img/skillsGraphic.png">
-            </div> -->
         </div>
     </div>
     <!-- ==================Gallery ===================-->
