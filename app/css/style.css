@@ -142,7 +142,7 @@ h2{
     background-image:url(./img/background.jpg);
     justify-content: center; 
     background-size: cover; 
-    /*height:100vh;*/
+    height:100vh;
     padding:30px;
     display:flex;
     flex-direction: row;
@@ -167,14 +167,15 @@ h2{
 }
 
 .mePanel2{
- width:500px;
+ /*width:500px;*/
 font-size:12px;
    
 }
 
-/*.mePanel1{
- 
-}*/
+.mePanel1{
+ /*width:800px;*/
+ height:450px;
+}
 
 #introRow {
     width:100%;
